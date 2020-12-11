@@ -1,0 +1,13 @@
+setup_obj	setup_pic	setup_col	target_obj	target_pic	target_col	itempaar	distractor	distractor_cond	focus_cond	condition
+Blut	Blut_rot.png	rot	Krone	Krone_gold.png	gold	1		control	wide	wide_control
+Kaktus	Kaktus_gruen.png	gruen	Geige	Geige_braun.png	braun	2	Eimer	unrelated	wide	wide_unrelated
+Iglu	Iglu_weiss.png	weiss	Kissen	Kissen_weiss.png	weiss	3		control	narrow	narrow_control
+Lakritz	Lakritz_schwarz.png	schwarz	Herz	Herz_rot.png	rot	4	Mund	related	wide	wide_related
+Pokal	Pokal_gold.png	gold	Ring	Ring_gold.png	gold	5	Taxi	unrelated	narrow	narrow_unrelated
+Klee	Klee_gruen.png	gruen	Frosch	Frosch_gruen.png	gruen	6		control	narrow	narrow_control
+Piratenschiff	Piratenschiff_braun.png	braun	Teller	Teller_weiss.png	weiss	7	Hose	unrelated	wide	wide_unrelated
+Reifen	Reifen_schwarz.png	schwarz	Panther	Panther_schwarz.png	schwarz	8	Koffer	related	narrow	narrow_related
+Feuerwehr	Feuerwehr_rot.png	rot	Kirsche	Kirsche_rot.png	rot	9	Schwamm	unrelated	narrow	narrow_unrelated
+Trompete	Trompete_gold.png	gold	Erbse	Erbse_gruen.png	gruen	10		control	wide	wide_control
+Gespenst	Gespenst_weiss.png	weiss	Klavier	Klavier_schwarz.png	schwarz	11	Fliege	related	wide	wide_related
+Kaffeebohne	Kaffeebohne_braun.png	braun	Pferd	Pferd_braun.png	braun	12	Nest	related	narrow	narrow_related
