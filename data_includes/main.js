@@ -3,30 +3,6 @@ AddHost("https://amor.cms.hu-berlin.de/~idslfahm/ibex_bilder/PWI_BB/");
 PennController.InitiateRecorder( "https://amor.cms.hu-berlin.de/~idslfahm/recordings/Recording.php").label( "init" );
 //PennController.DebugOff()
 
-function SepWithN(sep, main, n) {
-    this.args = [sep,main];
-
-    this.run = function(arrays) {
-        assert(arrays.length == 2, "Wrong number of arguments (or bad argument) to SepWithN");
-        assert(parseInt(n) > 0, "N must be a positive number");
-        let sep = arrays[0];
-        let main = arrays[1];
-
-        if (main.length < = 1)
-            return main
-        else {
-            let newArray = [];
-            while (main.length){
-                for (let i = 0; i < n && main.length>0; i++)
-                    newArray.push(main.shift());
-                for (let j = 0; j < sep.length; ++j)
-                    newArray.push(sep[j]);
-            }
-            return newArray;
-        }
-    }
-}
-function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
 
 
 PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")

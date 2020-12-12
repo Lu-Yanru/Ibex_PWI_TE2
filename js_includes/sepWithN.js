@@ -13,7 +13,7 @@ function SepWithN(sep, main, n) {
             let newArray = [];
             while (main.length){
                 for (let i = 0; i < n && main.length>0; i++)
-                    newArray.push(main.pop());
+                    newArray.push(main.shift());
                 for (let j = 0; j < sep.length && main.length>0; ++j)
                     newArray.push(sep[j]);
             }
