@@ -316,7 +316,7 @@ PennController("PersonalData",
 
 PennController("hinweise",
 
-             newHtml("Hinweise_html.html")
+             newHtml("hinweise", "Hinweise_html.html")
              .print()
 
              ,
