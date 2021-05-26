@@ -5,7 +5,8 @@ PennController.DebugOff()
 
 
 //order of main blocks can be changed here
-PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "main_start", "main1", "question", "break", "main2", "send", "end")
+PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "test", "practice_start", "main_start",  "question", "break",  "send", "end")
+//PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start", "main1", "question", "break", "main2", "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
 
 
