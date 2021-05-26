@@ -1,7 +1,7 @@
 PennController.ResetPrefix( null );
 AddHost("https://amor.cms.hu-berlin.de/~idslfahm/ibex_bilder/PWI_BB/");
 PennController.InitiateRecorder( "https://amor.cms.hu-berlin.de/~idslfahm/recordings/Recording.php").label( "init" );
-//PennController.DebugOff()
+PennController.DebugOff()
 
 
 //order of main blocks can be changed here
@@ -974,7 +974,7 @@ PennController.Template("rand1-1-ibex.csv", variable =>
 
              ,
 
-             newTimer("RecordSetup", 1000) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
+             newTimer("RecordSetup", 1500) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
              .start()
              .wait()
 
@@ -1015,7 +1015,7 @@ PennController.Template("rand1-1-ibex.csv", variable =>
 
              ,
 
-             newTimer("RecordTarget", 1000) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
+             newTimer("RecordTarget", 1500) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
              .start()
              .wait()
 
@@ -1126,7 +1126,7 @@ PennController.Template("rand1-2-ibex.csv", variable =>
 
                  ,
 
-                 newTimer("RecordSetup", 1000) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
+                 newTimer("RecordSetup", 1500) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
                  .start()
                  .wait()
 
@@ -1167,7 +1167,7 @@ PennController.Template("rand1-2-ibex.csv", variable =>
 
                  ,
 
-                 newTimer("RecordTarget", 1000) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
+                 newTimer("RecordTarget", 1500) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
                  .start()
                  .wait()
 
