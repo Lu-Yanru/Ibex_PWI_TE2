@@ -345,12 +345,20 @@ PennController("hinweise",
 
 PennController("familiarization_start",
 
-              newText("familiarization_instr1", "Zun&auml;chst zeigen wir dir alle Bilder, die sp&auml;ter in dem Experiment vorkommen. Dabei erscheinen mehrere Bilder gleichzeitig auf dem Bildschirm. Unter jedem einzelnen Bild wird der Begriff stehen, mit dem du das Bild sp&auml;ter benennen sollst (z.B. &quot;Frosch&quot;, wenn das Bild einen Frosch zeigt). Betrachte die Bilder deshalb bitte aufmerksam und versuche dir die dazugeh&ouml;rigen Begriffe zu merken!")
+              newHtml("hinweise", "fam_start.html")
+              .print()
+
+              ,
+              newCanvas("space1", 1, 160)
+              .print()
+
+              ,
+              /*newText("familiarization_instr1", "Zun&auml;chst zeigen wir dir alle Bilder, die sp&auml;ter in dem Experiment vorkommen. Dabei erscheinen mehrere Bilder gleichzeitig auf dem Bildschirm. Unter jedem einzelnen Bild wird der Begriff stehen, mit dem du das Bild sp&auml;ter benennen sollst (z.B. &quot;Frosch&quot;, wenn das Bild einen Frosch zeigt). Betrachte die Bilder deshalb bitte aufmerksam und versuche dir die dazugeh&ouml;rigen Begriffe zu merken!")
               .settings.css("font-size", "18px")
 
               ,
 
-              newText("familiarization_instr2", "Nachdem du alle Bilder gesehen hast, wird es eine kurze Abfrage der Bilder geben, um zu &uuml;berpr&uuml;fen " )
+              newText("familiarization_instr2", "Nachdem du alle Bilder gesehen hast, wird es eine kurze Abfrage der Bilder geben." )
               .settings.css("font-size", "18px")
               .settings.bold()
 
@@ -373,7 +381,7 @@ PennController("familiarization_start",
               .add(300, 220, getText("familiarization_instr4"))
               .print()
 
-              ,
+              ,*/
 
               newButton("weiter", "weiter")
               .center()
@@ -388,7 +396,7 @@ PennController("familiarization_start",
     ;
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Familiarization
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Familiarization 1.5 min
 
 
 PennController.Template("fam.csv", variable =>
@@ -862,7 +870,15 @@ PennController.Template("uebung_v2.csv", variable =>
 
 PennController("main_start",
 
-              newText("main_instr1", "Jetzt beginnt das eigentliche Experiment!")
+              newHtml("hinweise", "main_start.html")
+              .print()
+
+              ,
+              newCanvas("space1", 1, 160)
+              .print()
+
+              ,
+              /*newText("main_instr1", "Jetzt beginnt das eigentliche Experiment!")
               .settings.css("font-size", "18px")
               .settings.bold()
 
@@ -873,7 +889,7 @@ PennController("main_start",
 
               ,
 
-              newText("main_instr3", "Es wird zwischendurch drei kurze Pausen geben.")
+              newText("main_instr3", "Es wird zwischendurch eine kurze Pause geben.")
               .settings.css("font-size", "18px")
 
               ,
@@ -890,7 +906,7 @@ PennController("main_start",
               .add(340,  220, getText("main_instr4"))
               .print()
 
-              ,
+              ,*/
 
               newButton("weiter", "weiter")
               .settings.center()
