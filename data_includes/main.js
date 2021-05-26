@@ -5,7 +5,7 @@ PennController.InitiateRecorder( "https://amor.cms.hu-berlin.de/~idslfahm/record
 
 
 //order of main blocks can be changed here
-PennController.Sequence("init", "question", "break")
+PennController.Sequence("init", "fam", "main1", "question", "break", "main2", "send", "end")
 //PennController.Sequence("init",  "main_start", "main_SOA100ms1", "question", "break", "main_SOA100ms2", "break","main_SOA-100ms1", "break","main_SOA-100ms2", "break","main_SOA0ms1","break","main_SOA0ms2"  ,  "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
 
@@ -1223,7 +1223,7 @@ PennController("question",
               ,
               newCanvas("questioncanvas", 800, 400)
               .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
-              .add(250,150, getText("Nein").settings.css("font-size", "18px"))
+              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
 
@@ -1309,7 +1309,7 @@ PennController("end",
 
     ,
 
-    newText("Code2", "<b> Code: PWIBB </b>")
+    newText("Code2", "<b> Code: PWIBB2 </b>")
     .settings.css("font-size", "large")
     .print()
 
