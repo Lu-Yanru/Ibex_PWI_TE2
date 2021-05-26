@@ -5,12 +5,9 @@ PennController.InitiateRecorder( "https://amor.cms.hu-berlin.de/~idslfahm/record
 
 
 //order of main blocks can be changed here
-PennController.Sequence("init", "familiarization")
+PennController.Sequence("init", "main1")
 //PennController.Sequence("init",  "main_start", "main_SOA100ms1", "question", "break", "main_SOA100ms2", "break","main_SOA-100ms1", "break","main_SOA-100ms2", "break","main_SOA0ms1","break","main_SOA0ms2"  ,  "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
-//PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "practice_one_start", randomize("practice_one"), "practice_two_start", randomize("practice_two"), "main_start",  "main_SOA100ms1", "break", "main_SOA100ms2", "break","main_SOA-100ms1", "break","main_SOA-100ms2", "break","main_SOA0ms1","break","main_SOA0ms2",  "send", "end" )
-// PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "practice_one_start", randomize("practice_one"), "practice_two_start", randomize("practice_two"), "main_start",  "main_SOA-100ms1", "break", "main_SOA-100ms2", "break","main_SOA0ms1", "break","main_SOA0ms2", "break","main_SOA100ms1","break","main_SOA100ms2",  "send", "end" )
-// PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "practice_one_start", randomize("practice_one"), "practice_two_start", randomize("practice_two"), "main_start",  "main_SOA0ms1", "break", "main_SOA0ms2", "break","main_SOA100ms1", "break","main_SOA100ms2", "break","main_SOA-100ms1","break","main_SOA-100ms2",  "send", "end" )
 
 
 
@@ -914,12 +911,8 @@ PennController("main_start",
 
 PennController.Template("rand1-1-ibex.csv", variable =>
 
-    PennController("main_SOA100ms1",
+    PennController("main",
 
-             newText("Distractor" , variable.distractor)
-             .settings.bold()
-
-             ,
 
              newImage("SetupPic", variable.setup_pic)
              .size(300, 300)
@@ -1057,13 +1050,12 @@ PennController.Template("rand1-1-ibex.csv", variable =>
     .log( "browser"              , getVar("browser")        )
     .log( "SetupObject"          , getVar("setup_pic")      )
     .log( "TargetObject"         , getVar("target_pic")     )
-    .log( "Distractor"           , getVar("distractor")     )
+    //.log( "Distractor"           , getVar("distractor")     )
     .log( "SetupColor"           , variable.setup_col       )
     .log( "TargetColor"          , variable.target_col      )
-    .log( "DistractorCondition"  , variable.distractor_cond )
-    .log( "FocusCondition"       , variable.focus_cond      )
+    //.log( "DistractorCondition"  , variable.distractor_cond )
+    //.log( "FocusCondition"       , variable.focus_cond      )
     .log( "Condition"            , variable.condition       )
-    .log( "Itempaar"             , variable.itempaar        )
     )
     ;
 
