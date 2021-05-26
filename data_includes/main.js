@@ -346,7 +346,7 @@ PennController("hinweise",
 
 PennController("familiarization_start",
 
-              newHtml("hinweise", "fam_start.html")
+              newHtml("fam", "fam_start.html")
               .print()
 
               ,
@@ -404,7 +404,10 @@ PennController.Template("fam.csv", variable =>
 
               PennController("familiarization",
 
-
+              newCanvas("Col", 800, 35)
+              .add(390, 0, newText("Color", variable.Farbe).settings.css("font-size", "25px").settings.css("font-family", "Times New Roman").settings.css("font-weight", "bold"))
+              .print()
+              ,
               newCanvas("Row1", 800, 175)
               .add (75,   0, newImage( "Bild1", variable.Bild1).size(150,150))
               .add(125, 155, newText ( "Wort1", variable.Wort1).settings.css("font-size", "20px").settings.css("font-family", "Times New Roman") )
