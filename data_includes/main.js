@@ -911,7 +911,7 @@ PennController("main_start",
 
 PennController.Template("rand1-1-ibex.csv", variable =>
 
-    PennController("main",
+    PennController("main1",
 
 
              newImage("SetupPic", variable.setup_pic)
