@@ -5,7 +5,8 @@ PennController.InitiateRecorder( "https://amor.cms.hu-berlin.de/~idslfahm/record
 
 
 //order of main blocks can be changed here
-PennController.Sequence("init",  "main_start", "main_SOA100ms1", "question", "break", "main_SOA100ms2", "break","main_SOA-100ms1", "break","main_SOA-100ms2", "break","main_SOA0ms1","break","main_SOA0ms2"  ,  "send", "end")
+PennController.Sequence("init", "familiarization")
+//PennController.Sequence("init",  "main_start", "main_SOA100ms1", "question", "break", "main_SOA100ms2", "break","main_SOA-100ms1", "break","main_SOA-100ms2", "break","main_SOA0ms1","break","main_SOA0ms2"  ,  "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "practice_one_start", randomize("practice_one"), "practice_two_start", randomize("practice_two"), "main_start",  "main_SOA100ms1", "break", "main_SOA100ms2", "break","main_SOA-100ms1", "break","main_SOA-100ms2", "break","main_SOA0ms1","break","main_SOA0ms2",  "send", "end" )
 // PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "practice_one_start", randomize("practice_one"), "practice_two_start", randomize("practice_two"), "main_start",  "main_SOA-100ms1", "break", "main_SOA-100ms2", "break","main_SOA0ms1", "break","main_SOA0ms2", "break","main_SOA100ms1","break","main_SOA100ms2",  "send", "end" )
@@ -394,7 +395,7 @@ PennController("familiarization_start",
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Familiarization
 
 
-PennController.Template("Familiarization_PWI.csv", variable =>
+PennController.Template("fam.csv", variable =>
 
               PennController("familiarization",
 
@@ -420,8 +421,8 @@ PennController.Template("Familiarization_PWI.csv", variable =>
               .add(125, 155, newText ("Wort4", variable.Wort4).settings.css("font-size", "20px").settings.css("font-family", "Times New Roman") )
               .add(325,   0, newImage("Bild5", variable.Bild5).size(150,150))
               .add(375, 155, newText ("Wort5", variable.Wort5).settings.css("font-size", "20px").settings.css("font-family", "Times New Roman") )
-              .add(575,   0, newImage("Bild6", variable.Bild6).size(150,150))
-              .add(625, 155, newText ("Wort6", variable.Wort6).settings.css("font-size", "20px").settings.css("font-family", "Times New Roman") )
+              //.add(575,   0, newImage("Bild6", variable.Bild6).size(150,150))
+              //.add(625, 155, newText ("Wort6", variable.Wort6).settings.css("font-size", "20px").settings.css("font-family", "Times New Roman") )
               .print()
 
               ,
@@ -457,8 +458,8 @@ PennController.Template("Familiarization_PWI.csv", variable =>
     .log( "Wort4"       , variable.Wort4 )
     .log( "Bild5"       , variable.Bild5 )
     .log( "Wort5"       , variable.Wort5 )
-    .log( "Bild6"       , variable.Bild6 )
-    .log( "Wort6"       , variable.Wort6 )
+    //.log( "Bild6"       , variable.Bild6 )
+    //.log( "Wort6"       , variable.Wort6 )
     .log( "Farbe"       , variable.Farbe )
     .log( "ID"          , getVar("ID")      )
     .log( "gender"      , getVar("gender")  )
@@ -911,7 +912,7 @@ PennController("main_start",
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Main
 
-PennController.Template("uebung_v2.csv", variable =>
+PennController.Template("rand1-1-ibex.csv", variable =>
 
     PennController("main_SOA100ms1",
 
@@ -999,7 +1000,7 @@ PennController.Template("uebung_v2.csv", variable =>
 
              newCanvas("TargetCanvas", 300, 300)
              .add(0, 0, getImage("TargetPic"))
-             .add(110, 140, getText("Distractor").settings.css("font-size", "30px").settings.css("font-family", "Times New Roman")) // SOA = 0ms --> Uebung fuer jeweilige SOA anpassen?
+             //.add(110, 140, getText("Distractor").settings.css("font-size", "30px").settings.css("font-family", "Times New Roman")) // SOA = 0ms --> Uebung fuer jeweilige SOA anpassen?
              .print()
 
 
