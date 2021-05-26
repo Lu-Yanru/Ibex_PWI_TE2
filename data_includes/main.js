@@ -5,8 +5,8 @@ PennController.DebugOff()
 
 
 //order of main blocks can be changed here
-PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "test", "practice_start", "main_start",  "question", "break",  "send", "end")
-//PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start", "main1", "question", "break", "main2", "send", "end")
+PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "test", "practice_start", "practice", "main_start",  "question", "break",  "send", "end")
+//PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", randomize("practice"), "main_start", "main1", "question", "break", "main2", "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
 
 
@@ -711,14 +711,10 @@ PennController("practice_start",
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  Practice
 
 
-PennController.Template("uebung_v2.csv", variable =>
+PennController.Template("uebung.csv", variable =>
 
     PennController("practice",
 
-             newText("Distractor" , variable.distractor)
-             .settings.bold()
-
-             ,
 
              newImage("SetupPic", variable.setup_pic)
              .size(300, 300)
@@ -780,7 +776,7 @@ PennController.Template("uebung_v2.csv", variable =>
 
              ,
 
-             newTimer("RecordSetup", 1000) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
+             newTimer("RecordSetup", 1500) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
              .start()
              .wait()
 
@@ -799,7 +795,7 @@ PennController.Template("uebung_v2.csv", variable =>
 
              newCanvas("TargetCanvas", 300, 300)
              .add(0, 0, getImage("TargetPic"))
-             .add(110, 140, getText("Distractor").settings.css("font-size", "30px").settings.css("font-family", "Times New Roman")) // SOA = 0ms --> Uebung fuer jeweilige SOA anpassen?
+             //.add(110, 140, getText("Distractor").settings.css("font-size", "30px").settings.css("font-family", "Times New Roman")) // SOA = 0ms --> Uebung fuer jeweilige SOA anpassen?
              .print()
 
 
@@ -821,7 +817,7 @@ PennController.Template("uebung_v2.csv", variable =>
 
              ,
 
-             newTimer("RecordTarget", 1000) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
+             newTimer("RecordTarget", 1500) // Recording geht noch 1000 ms weiter -> insgesamt also 2000ms
              .start()
              .wait()
 
@@ -856,13 +852,13 @@ PennController.Template("uebung_v2.csv", variable =>
     .log( "browser"              , getVar("browser")        )
     .log( "SetupObject"          , getVar("setup_pic")      )
     .log( "TargetObject"         , getVar("target_pic")     )
-    .log( "Distractor"           , getVar("distractor")     )
+    //.log( "Distractor"           , getVar("distractor")     )
     .log( "SetupColor"           , variable.setup_col       )
     .log( "TargetColor"          , variable.target_col      )
-    .log( "DistractorCondition"  , variable.distractor_cond )
-    .log( "FocusCondition"       , variable.focus_cond      )
+    //.log( "DistractorCondition"  , variable.distractor_cond )
+    //.log( "FocusCondition"       , variable.focus_cond      )
     .log( "Condition"            , variable.condition       )
-    .log( "Itempaar"             , variable.itempaar        )
+    //.log( "Itempaar"             , variable.itempaar        )
     )
     ;
 

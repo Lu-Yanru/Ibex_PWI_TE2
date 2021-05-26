@@ -1,5 +1,7 @@
-Pic,Word,Cond
-Elefant.png,Fenster,UE
-Blume.png,Baum,UE
-Schuh.png,Socke,UE
-Uhr.png,Katze,UE
+setup_pic,setup_obj,setup_col,target_pic,target_obj,target_col,condition
+Schaf_weiss.png,Schaf,weiss,Koffer_schwarz.png,Koffer,schwarz,ue
+Tisch_braun.png,Tisch,braun,Nest_braun.png,Nest,braun,ue
+Blut_rot.png,Blut,rot,Tomate_rot.png,Tomate,rot,ue
+Anzug_schwarz.png,Anzug,schwarz,Monster_gruen.png,Monster,gruen,ue
+Erbse_gruen.png,Erbse,gruen,Kette_gold.png,Kette,gold,ue
+Panther_schwarz.png,Panther,schwarz,Muenze_gold.png,Muenze,gold,ue
