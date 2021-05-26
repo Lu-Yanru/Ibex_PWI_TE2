@@ -1218,15 +1218,15 @@ PennController("question",
 
               newText("Nein", "<small>Nein [F]</small>")
               .settings.center()
-              .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "medium"))
+              .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
               .settings.css("font-size", "medium")
               ,
               newCanvas("questioncanvas", 800, 400)
               .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
-              .add(250,100, getText("Nein").settings.css("font-size", "18px"))
+              .add(250,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
-              
+
               newSelector("select")
                 .settings.add(getText("Nein"), getText("Ja"))
                 .settings.keys("F", "J")
