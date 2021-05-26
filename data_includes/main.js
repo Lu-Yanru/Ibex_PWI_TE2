@@ -5,8 +5,7 @@ PennController.DebugOff()
 
 
 //order of main blocks can be changed here
-PennController.Sequence("init", "familiarization", "main1", "question", "break", "main2", "send", "end")
-//PennController.Sequence("init",  "main_start", "main_SOA100ms1", "question", "break", "main_SOA100ms2", "break","main_SOA-100ms1", "break","main_SOA-100ms2", "break","main_SOA0ms1","break","main_SOA0ms2"  ,  "send", "end")
+PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "main_start", "main1", "question", "break", "main2", "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
 
 
@@ -907,7 +906,7 @@ PennController("main_start",
 
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Main
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Main 3.5 min per block
 
 PennController.Template("rand1-1-ibex.csv", variable =>
 
