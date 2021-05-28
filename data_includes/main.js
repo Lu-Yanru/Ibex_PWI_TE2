@@ -1243,7 +1243,7 @@ PennController("question1",
               ,
               newCanvas("questioncanvas1", 800, 400)
               .add(250,50, newText("question1", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
-              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
+              .add(270,150, getText("Nein1").settings.css("font-size", "18px"))
               .print()
               ,
 
