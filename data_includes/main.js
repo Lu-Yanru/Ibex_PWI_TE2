@@ -5,7 +5,7 @@ PennController.DebugOff()
 
 
 
-PennController.Sequence("init","question1", "question2", "break",  "send", "end")
+PennController.Sequence("init","question1","break",  "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", randomize("practice"), "main_start", "main1", "question", "break", "main2", "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
 
@@ -1231,9 +1231,14 @@ PennController.Template("rand1-2-ibex.csv", variable =>
 
 PennController("question1",
 
-              newText("Nein", "<small>Nein [F]</small>")
+              newText("Nein1", "<small>Nein [F]</small>")
               .settings.center()
-              .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
+              .settings.after(newText("Ja1", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
+              .settings.css("font-size", "medium")
+              ,
+              newText("Nein2", "<small>Nein [F]</small>")
+              .settings.center()
+              .settings.after(newText("Ja2", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
               .settings.css("font-size", "medium")
               ,
               newCanvas("questioncanvas1", 800, 400)
@@ -1243,7 +1248,7 @@ PennController("question1",
               ,
 
               newSelector("select1")
-                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.add(getText("Nein1"), getText("Ja1"))
                 .settings.keys("F", "J")
                 .settings.log()
                 .wait()
@@ -1251,16 +1256,13 @@ PennController("question1",
               getCanvas("questioncanvas1")
               .remove()
               ,
-              getSelector("select1")
-              .remove()
-              ,
               newCanvas("questioncanvas2", 800, 400)
               .add(250,50, newText("question2", "Wurde eine braune Nuss gezeigt?").settings.css("font-size", "large"))
-              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
+              .add(270,150, getText("Nein2").settings.css("font-size", "18px"))
               .print()
               ,
               newSelector("select2")
-                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.add(getText("Nein2"), getText("Ja2"))
                 .settings.keys("F", "J")
                 .settings.log()
                 .wait()
