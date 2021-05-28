@@ -1242,7 +1242,7 @@ PennController("question1",
               .print()
               ,
 
-              newSelector("select")
+              newSelector("select1")
                 .settings.add(getText("Nein"), getText("Ja"))
                 .settings.keys("F", "J")
                 .settings.log()
@@ -1251,12 +1251,15 @@ PennController("question1",
               getCanvas("questioncanvas1")
               .remove()
               ,
+              getSelector("select1")
+              .remove()
+              ,
               newCanvas("questioncanvas2", 800, 400)
               .add(250,50, newText("question", "Wurde eine braune Nuss gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
-              newSelector("select")
+              newSelector("select2")
                 .settings.add(getText("Nein"), getText("Ja"))
                 .settings.keys("F", "J")
                 .settings.log()
@@ -1282,7 +1285,7 @@ PennController("question2",
               .print()
               ,
 
-              newSelector("select")
+              newSelector("select1")
                 .settings.add(getText("Nein"), getText("Ja"))
                 .settings.keys("F", "J")
                 .settings.log()
@@ -1291,13 +1294,16 @@ PennController("question2",
               getCanvas("questioncanvas1")
               .remove()
               ,
+              getSelector("select1")
+              .remove()
+              ,
               newCanvas("questioncanvas2", 800, 400)
               .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
 
-              newSelector("select")
+              newSelector("select2")
                 .settings.add(getText("Nein"), getText("Ja"))
                 .settings.keys("F", "J")
                 .settings.log()
