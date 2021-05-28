@@ -4,9 +4,9 @@ PennController.InitiateRecorder( "https://amor.cms.hu-berlin.de/~idslfahm/record
 PennController.DebugOff()
 
 
-//order of main blocks can be changed here
-//PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "test", "practice_start", "practice", "main_start",  "question", "break",  "send", "end")
-PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", randomize("practice"), "main_start", "main1", "question", "break", "main2", "send", "end")
+
+PennController.Sequence("init","question1", "question2", "break",  "send", "end")
+//PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", randomize("practice"), "main_start", "main1", "question", "break", "main2", "send", "end")
 //PennController.Sequence("init", "intro", "PersonalData", "hinweise", "familiarization_start", "familiarization", "test", "practice_start", "practice", "main_start",   sepWithN("break", "main", 4)   ,  "send", "end")
 
 
@@ -1229,14 +1229,14 @@ PennController.Template("rand1-2-ibex.csv", variable =>
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Control question
 
-PennController("question",
+PennController("question1",
 
               newText("Nein", "<small>Nein [F]</small>")
               .settings.center()
               .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
               .settings.css("font-size", "medium")
               ,
-              newCanvas("questioncanvas", 800, 400)
+              newCanvas("questioncanvas1", 800, 400)
               .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
@@ -1248,6 +1248,62 @@ PennController("question",
                 .settings.log()
                 .wait()
               ,
+              getCanvas("questioncanvas1")
+              .remove()
+              ,
+              newCanvas("questioncanvas2", 800, 400)
+              .add(250,50, newText("question", "Wurde eine braune Nuss gezeigt?").settings.css("font-size", "large"))
+              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
+              .print()
+              ,
+              newSelector("select")
+                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.keys("F", "J")
+                .settings.log()
+                .wait()
+              ,
+
+
+
+)
+.setOption("hideProgressBar", "true")
+;
+
+PennController("question2",
+
+              newText("Nein", "<small>Nein [F]</small>")
+              .settings.center()
+              .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
+              .settings.css("font-size", "medium")
+              ,
+              newCanvas("questioncanvas1", 800, 400)
+              .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
+              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
+              .print()
+              ,
+
+              newSelector("select")
+                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.keys("F", "J")
+                .settings.log()
+                .wait()
+              ,
+              getCanvas("questioncanvas1")
+              .remove()
+              ,
+              newCanvas("questioncanvas2", 800, 400)
+              .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
+              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
+              .print()
+              ,
+
+              newSelector("select")
+                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.keys("F", "J")
+                .settings.log()
+                .wait()
+              ,
+
 
 
 
