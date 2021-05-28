@@ -1237,7 +1237,7 @@ PennController("question1",
               .settings.css("font-size", "medium")
               ,
               newCanvas("questioncanvas1", 800, 400)
-              .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
+              .add(250,50, newText("question1", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
@@ -1255,7 +1255,7 @@ PennController("question1",
               .remove()
               ,
               newCanvas("questioncanvas2", 800, 400)
-              .add(250,50, newText("question", "Wurde eine braune Nuss gezeigt?").settings.css("font-size", "large"))
+              .add(250,50, newText("question2", "Wurde eine braune Nuss gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
@@ -1280,7 +1280,7 @@ PennController("question2",
               .settings.css("font-size", "medium")
               ,
               newCanvas("questioncanvas1", 800, 400)
-              .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
+              .add(250,50, newText("question1", "Wurde ein wei&szlig;er Brief gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
@@ -1298,7 +1298,7 @@ PennController("question2",
               .remove()
               ,
               newCanvas("questioncanvas2", 800, 400)
-              .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
+              .add(250,50, newText("question2", "Wurde ein brauner Koffer gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
