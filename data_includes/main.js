@@ -1248,10 +1248,10 @@ PennController("question1",
               ,
 
               newSelector("select1")
-              .disableClicks()
-                .settings.add(getText("Nein1"), getText("Ja1"))
-                .settings.keys("F", "J")
-                .settings.log()
+              //.disableClicks()
+                .add(getText("Nein1"), getText("Ja1"))
+                .keys("F", "J")
+                .log()
                 .wait()
               ,
               getCanvas("questioncanvas1")
@@ -1263,10 +1263,10 @@ PennController("question1",
               .print()
               ,
               newSelector("select2")
-              .disableClicks()
-                .settings.add(getText("Nein2"), getText("Ja2"))
-                .settings.keys("F", "J")
-                .settings.log()
+              //.disableClicks()
+                .add(getText("Nein2"), getText("Ja2"))
+                .keys("F", "J")
+                .log()
                 .wait()
               ,
 
