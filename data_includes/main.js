@@ -1231,21 +1231,23 @@ PennController.Template("rand1-2-ibex.csv", variable =>
 
 PennController("question1",
 
+              newText("Q1", "Wurde ein schwarzer Tisch gezeigt?")
+              .settings.center()
+              .settings.css("font-size", "large")
+              .print()
+              ,
               newText("Nein1", "<small>Nein [F]</small>")
               .settings.center()
               .settings.after(newText("Ja1", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
               .settings.css("font-size", "medium")
+              .print()
               ,
-              newText("Nein2", "<small>Nein [F]</small>")
-              .settings.center()
-              .settings.after(newText("Ja2", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
-              .settings.css("font-size", "medium")
-              ,
-              newCanvas("questioncanvas1", 800, 400)
+
+              /*newCanvas("questioncanvas1", 800, 400)
               .add(250,50, newText("question1", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein1").settings.css("font-size", "18px"))
               .print()
-              ,
+              ,*/
 
               newSelector("select1")
               //.disableClicks()
@@ -1254,14 +1256,28 @@ PennController("question1",
                 .log()
                 .wait()
               ,
-              getCanvas("questioncanvas1")
+              getText("Q1")
               .remove()
               ,
-              newCanvas("questioncanvas2", 800, 400)
+              getText("Nein1")
+              .remove()
+              ,
+              newText("Q2", "Wurde eine braune Nuss gezeigt?")
+              .settings.center()
+              .settings.css("font-size", "large")
+              .print()
+              ,
+              newText("Nein2", "<small>Nein [F]</small>")
+              .settings.center()
+              .settings.after(newText("Ja2", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
+              .settings.css("font-size", "medium")
+              .print()
+              ,
+              /*newCanvas("questioncanvas2", 800, 400)
               .add(250,50, newText("question2", "Wurde eine braune Nuss gezeigt?").settings.css("font-size", "large"))
               .add(270,150, getText("Nein2").settings.css("font-size", "18px"))
               .print()
-              ,
+              ,*/
               newSelector("select2")
               //.disableClicks()
                 .add(getText("Nein2"), getText("Ja2"))
