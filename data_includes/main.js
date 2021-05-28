@@ -1247,9 +1247,9 @@ PennController("question1",
 
               newSelector("select")
               //.disableClicks()
-                .add(getText("Nein"), getText("Ja"))
-                .keys("F",   "J")
-                .log()
+                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.keys("F",   "J")
+                .settings.log()
                 .wait()
               ,
 
@@ -1276,9 +1276,9 @@ PennController("question2",
 
               newSelector("select")
               //.disableClicks()
-                .add(getText("Nein"), getText("Ja"))
-                .keys("F",   "J")
-                .log()
+                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.keys("F",   "J")
+                .settings.log()
                 .wait()
               ,
 
@@ -1331,9 +1331,9 @@ PennController("question4",
 
               newSelector("select")
               //.disableClicks()
-                .add(getText("Nein"), getText("Ja"))
-                .keys("F",   "J")
-                .log()
+                .settings.add(getText("Nein"), getText("Ja"))
+                .settings.keys("F",   "J")
+                .settings.log()
                 .wait()
               ,
 
