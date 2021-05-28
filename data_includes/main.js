@@ -1,7 +1,7 @@
 PennController.ResetPrefix( null );
 AddHost("https://amor.cms.hu-berlin.de/~idslfahm/ibex_bilder/PWI_BB/");
 PennController.InitiateRecorder( "https://amor.cms.hu-berlin.de/~idslfahm/recordings/Recording.php").label( "init" );
-//PennController.DebugOff()
+PennController.DebugOff()
 
 
 
@@ -1241,7 +1241,7 @@ PennController("question1",
 
               newCanvas("questioncanvas", 800, 400)
               .add(250,50, newText("question", "Wurde ein schwarzer Tisch gezeigt?").settings.css("font-size", "large"))
-              .add(270,150, getText("Nein1").settings.css("font-size", "18px"))
+              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
 
@@ -1270,7 +1270,7 @@ PennController("question2",
 
               newCanvas("questioncanvas", 800, 400)
               .add(250,50, newText("question", "Wurde eine braune Nuss gezeigt?").settings.css("font-size", "large"))
-              .add(270,150, getText("Nein1").settings.css("font-size", "18px"))
+              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
 
@@ -1325,7 +1325,7 @@ PennController("question4",
 
               newCanvas("questioncanvas", 800, 400)
               .add(250,50, newText("question", "Wurde ein schwarzer Ring gezeigt?").settings.css("font-size", "large"))
-              .add(270,150, getText("Nein1").settings.css("font-size", "18px"))
+              .add(270,150, getText("Nein").settings.css("font-size", "18px"))
               .print()
               ,
 
