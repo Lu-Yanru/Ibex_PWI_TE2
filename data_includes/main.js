@@ -1248,6 +1248,7 @@ PennController("question1",
               ,
 
               newSelector("select1")
+              .disableClicks()
                 .settings.add(getText("Nein1"), getText("Ja1"))
                 .settings.keys("F", "J")
                 .settings.log()
@@ -1262,6 +1263,7 @@ PennController("question1",
               .print()
               ,
               newSelector("select2")
+              .disableClicks()
                 .settings.add(getText("Nein2"), getText("Ja2"))
                 .settings.keys("F", "J")
                 .settings.log()
