@@ -1236,7 +1236,6 @@ PennController("question1",
               .settings.center()
               .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
               .settings.css("font-size", "medium")
-              .print()
               ,
 
               newCanvas("questioncanvas", 800, 400)
@@ -1265,7 +1264,6 @@ PennController("question2",
               .settings.center()
               .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
               .settings.css("font-size", "medium")
-              .print()
               ,
 
               newCanvas("questioncanvas", 800, 400)
@@ -1320,7 +1318,6 @@ PennController("question4",
               .settings.center()
               .settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
               .settings.css("font-size", "medium")
-              .print()
               ,
 
               newCanvas("questioncanvas", 800, 400)
